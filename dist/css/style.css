@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&family=Teko&display=swap");
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 75% georgia, sans-serif;
+  line-height: 1.88889;
+  color: #555753;
+  background: #fff url(images/body-background.png) no-repeat bottom right;
+  margin: 0;
+  padding: 0;
+}
+
+abbr {
+  font-family: "Marck Script";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  /*background: linear-gradient(to right, #02E0B9, #F9DB84, #FF8334);*/
+  background: transparent url(images/pexels-pixabay-33688.jpg);
+  border: 2px solid yellow;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #1153FC;
+}
+
+header:hover {
+  background: linear-gradient(to left, #22054F, #9D65D1, #28CFFD);
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 60%;
+  border: 5px solid green;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.banner, h1 {
+  font-family: "Teko";
+  font-size: 80px;
+  color: #F00B51;
+}
+
+h1::first-letter {
+  font-weight: 1000;
+  color: #22054F;
+  font-size: 120px;
+}
+
+header::before {
+  height: 10px;
+  content: "";
+  background: #1153FC;
+}
+
+.banner, h2 {
+  align-self: flex-end;
+  font-family: "Chakra Petch";
+}
+
+.banner, h1:hover {
+  background: url(images/ufo_1452951.png) no-repeat top left;
+  font-family: "Chakra Petch";
+  color: #FFA62E;
+}
+
+h2 {
+  animation: header 15s infinite linear;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    align-self: center;
+  }
+}
+@keyframes header {
+  10% {
+    color: #F00B51;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50px);
+  }
+  20% {
+    background: #02E0B9;
+    transform: translate(-100px, -40px);
+  }
+  30% {
+    transform: translate(-150px, -60px);
+  }
+  40% {
+    transform: translate(-200px, -80px);
+    transform: rotateX("20deg");
+  }
+  50% {
+    transform: translate(-250px, -100px);
+  }
+  60% {
+    transform: translate(-200px, -120px);
+    font-family: "Marck Script";
+  }
+  70% {
+    background: #B2B34B;
+    transform: translate(-150px, -140px);
+    font-family: "Marck Script";
+  }
+  80% {
+    transform: rotate(10deg);
+    transform: translate(-100px, -160px);
+  }
+  90% {
+    transform: translate(-50px, -140px);
+    font-family: "Marck Script";
+  }
+  100% {
+    transform: translate(-10px, -40px);
+    font-family: "Marck Script";
+  }
+}/*# sourceMappingURL=style.css.map */
