@@ -8,9 +8,12 @@ html {
 
 body {
   font: 75% georgia, sans-serif;
-  line-height: 1.88889;
-  color: #555753;
-  background: #fff url(images/body-background.png) no-repeat bottom right;
+  line-height: 1.4;
+  color: #959ba3;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/body-background.svg");
+  background-size: cover;
   margin: 0;
   padding: 0;
 }
@@ -19,57 +22,56 @@ abbr {
   font-family: "Marck Script";
 }
 
+/*
+ * Header styles
+ */
 header {
   display: flex;
   justify-content: space-between;
-  /*background: linear-gradient(to right, #02E0B9, #F9DB84, #FF8334);*/
-  background: transparent url(images/pexels-pixabay-33688.jpg);
-  border: 2px solid yellow;
+  background: #091624;
+  border: 1px solid #142945;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #1153FC;
 }
-
 header:hover {
-  background: linear-gradient(to left, #22054F, #9D65D1, #28CFFD);
+  background: linear-gradient(to left, #091624, #142945, #091624);
   border-top-left-radius: 50%;
   border-bottom-right-radius: 60%;
-  border: 5px solid green;
+  border: 1px solid #142945;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-
-.banner, h1 {
+header h1 {
   font-family: "Teko";
   font-size: 80px;
-  color: #F00B51;
+  color: #959ba3;
 }
-
-h1::first-letter {
+header h1::first-letter {
   font-weight: 1000;
-  color: #22054F;
+  color: #732262;
   font-size: 120px;
 }
-
-header::before {
-  height: 10px;
-  content: "";
-  background: #1153FC;
+header h1:hover {
+  line-height: 0.8;
+  font-size: 5rem;
+  font-family: "Chakra Petch";
+  color: #732262;
 }
-
-.banner, h2 {
+header h1:hover::first-letter {
+  font-weight: 1000;
+  color: #959ba3;
+  font-size: 7rem;
+}
+header h2 {
+  padding: 118px 100px 160px 100px;
+  background-image: url(images/flying-saucer.svg);
+  font-size: 0.9rem;
+  color: #142945;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px 300px;
   align-self: flex-end;
   font-family: "Chakra Petch";
-}
-
-.banner, h1:hover {
-  background: url(images/ufo_1452951.png) no-repeat top left;
-  font-family: "Chakra Petch";
-  color: #FFA62E;
-}
-
-h2 {
-  animation: header 15s infinite linear;
-  border-radius: 5px;
+  animation: flying-saucer 15s infinite linear;
 }
 
 @media (max-width: 600px) {
@@ -77,22 +79,14 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
-  h1 {
-    font-size: 50px;
-  }
-  h2 {
-    align-self: center;
-  }
 }
-@keyframes header {
+@keyframes flying-saucer {
   10% {
-    color: #F00B51;
     left: 0;
     bottom: 0;
     transform: translate(-50px);
   }
   20% {
-    background: #02E0B9;
     transform: translate(-100px, -40px);
   }
   30% {
@@ -107,12 +101,9 @@ h2 {
   }
   60% {
     transform: translate(-200px, -120px);
-    font-family: "Marck Script";
   }
   70% {
-    background: #B2B34B;
     transform: translate(-150px, -140px);
-    font-family: "Marck Script";
   }
   80% {
     transform: rotate(10deg);
@@ -120,10 +111,8 @@ h2 {
   }
   90% {
     transform: translate(-50px, -140px);
-    font-family: "Marck Script";
   }
   100% {
     transform: translate(-10px, -40px);
-    font-family: "Marck Script";
   }
 }/*# sourceMappingURL=style.css.map */
