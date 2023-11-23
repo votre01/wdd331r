@@ -245,7 +245,7 @@ header h2 {
   font-size: 5rem;
   padding: 4rem 0;
   justify-self: center;
-  background-image: url("/images/astronaut.svg");
+  background-image: url(../images/astronaut.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-size: 280px;
