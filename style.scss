@@ -318,6 +318,12 @@ header {
         border-top: 12px solid $accent3-color;
         // border-bottom: 12px solid $accent1-color;
         border-radius: 2rem 0;
+        transition: transform .5s ease, background-color .5s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: $primary-color;
+        }
     }
 }
 
