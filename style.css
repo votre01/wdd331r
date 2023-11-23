@@ -12,6 +12,7 @@ body {
   color: #959ba3;
   width: 100%;
   height: 100vh;
+  background-color: #142945;
   background-image: url("../images/body-background.svg");
   background-size: cover;
   margin: 0;
@@ -155,6 +156,7 @@ header h2 {
  * Main styling
  */
 .main {
+  max-width: 1800px;
   display: grid;
   justify-content: space-evenly;
   justify-items: center;
@@ -178,9 +180,12 @@ header h2 {
   color: #de9a38;
 }
 
+/*
+ * Sidebar styling
+ */
 .sidebar {
   position: absolute;
-  top: 32%;
+  top: 27%;
   padding: 1rem;
   width: 30%;
 }
@@ -195,16 +200,86 @@ header h2 {
   font-size: 1.4rem;
   font-family: "Teko";
   border-radius: 1rem;
-  transition: background-color 0.5s ease;
   transition: transform 0.5s ease, background-color 0.5s ease;
 }
 .sidebar .wrapper .design-selection h3:hover, .sidebar .wrapper .design-archives h3:hover, .sidebar .wrapper .zen-resources h3:hover {
   background-color: #732262;
   transform: translateX(2rem);
+  opacity: 1;
 }
-.sidebar .wrapper .design-selection ul, .sidebar .wrapper .design-archives ul, .sidebar .wrapper .zen-resources ul {
+.sidebar .wrapper .design-selection nav, .sidebar .wrapper .design-selection ul, .sidebar .wrapper .design-archives nav, .sidebar .wrapper .design-archives ul, .sidebar .wrapper .zen-resources nav, .sidebar .wrapper .zen-resources ul {
   display: none;
 }
+.sidebar .wrapper .design-selection:hover nav, .sidebar .wrapper .design-selection:hover ul, .sidebar .wrapper .design-archives:hover nav, .sidebar .wrapper .design-archives:hover ul, .sidebar .wrapper .zen-resources:hover nav, .sidebar .wrapper .zen-resources:hover ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.sidebar .wrapper .design-selection:hover nav li, .sidebar .wrapper .design-selection:hover ul li, .sidebar .wrapper .design-archives:hover nav li, .sidebar .wrapper .design-archives:hover ul li, .sidebar .wrapper .zen-resources:hover nav li, .sidebar .wrapper .zen-resources:hover ul li {
+  margin: 0.2rem;
+  padding: 0.8rem;
+  background-color: #de9a38;
+  border-radius: 1rem 0.2rem;
+  color: #091624;
+  font-size: 0.8rem;
+  transition: transform 0.5s ease;
+}
+.sidebar .wrapper .design-selection:hover nav li:hover, .sidebar .wrapper .design-selection:hover ul li:hover, .sidebar .wrapper .design-archives:hover nav li:hover, .sidebar .wrapper .design-archives:hover ul li:hover, .sidebar .wrapper .zen-resources:hover nav li:hover, .sidebar .wrapper .zen-resources:hover ul li:hover {
+  transform: scale(1.08);
+}
+.sidebar .wrapper .design-selection:hover nav li a, .sidebar .wrapper .design-selection:hover ul li a, .sidebar .wrapper .design-archives:hover nav li a, .sidebar .wrapper .design-archives:hover ul li a, .sidebar .wrapper .zen-resources:hover nav li a, .sidebar .wrapper .zen-resources:hover ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #142945;
+  font-weight: 700;
+}
+
+.benefits {
+  grid-column: 1/3;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.benefits h3 {
+  width: 50%;
+  font-size: 5rem;
+  padding: 4rem 0;
+  justify-self: center;
+  background-image: url(../images/astronaut.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 280px;
+  animation: astronaut 10s infinite linear;
+}
+@keyframes astronaut {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.benefits p {
+  font-size: 2rem;
+}
+
+.requirements {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.requirements h3 {
+  grid-column: 1/5;
+}
+.requirements p {
+  padding: 1rem;
+  margin: 0.4rem;
+  background-color: rgba(9, 22, 36, 0.6);
+  border: 1px solid #de9a38;
+  border-top: 12px solid #de9a38;
+  border-radius: 2rem 0;
+}
+
 @media (max-width: 1420px) {
   header {
     flex-direction: column;
@@ -237,6 +312,9 @@ header h2 {
     overflow: hidden;
   }
   .sidebar {
-    top: 29%;
+    top: 26%;
+  }
+  .benefits, .requirements {
+    grid-column: 1/2;
   }
 }/*# sourceMappingURL=style.css.map */
