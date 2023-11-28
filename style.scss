@@ -69,19 +69,6 @@ header {
             color: $accent3-color;
             font-size: 120px;
         }
-
-        /*&:hover {
-            line-height: .8;
-            font-size: 5rem;        
-            font-family: 'Chakra Petch';
-            color: $accent2-color;
-
-            &::first-letter {
-                font-weight: 1000;
-                color: $accent1-color;
-                font-size: 7rem;
-            }
-        }*/
     }
 
     // Header h2 style
@@ -371,4 +358,35 @@ header {
     .benefits, .requirements {
         grid-column: 1/2;
     }
+}
+
+@media (max-width: 900px) {
+
+    .summary {
+        font-size: 1.8rem;       
+    
+        & p:nth-child(1) {
+            width: 600%;
+        }
+
+        & p:nth-child(2) {
+            width: 80%;
+            padding: .6rem;
+            font-size: .8rem;
+        }
+    }
+
+    .preamble {
+        max-width: 90%;
+        float: none;
+        margin: 2rem auto;
+        padding: .4rem;
+        border-radius: 1rem;
+
+        & p, & h3 {
+            max-width: 100%;
+            text-align: left;
+        }
+    }
+
 }

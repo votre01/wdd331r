@@ -51,18 +51,6 @@ header h1 {
   font-family: "Teko";
   font-size: 5rem;
   color: #142945;
-  /*&:hover {
-      line-height: .8;
-      font-size: 5rem;        
-      font-family: 'Chakra Petch';
-      color: $accent2-color;
-
-      &::first-letter {
-          font-weight: 1000;
-          color: $accent1-color;
-          font-size: 7rem;
-      }
-  }*/
 }
 header h1::first-letter {
   font-weight: 1000;
@@ -278,6 +266,11 @@ header h2 {
   border: 1px solid #de9a38;
   border-top: 12px solid #de9a38;
   border-radius: 2rem 0;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+.requirements p:hover {
+  transform: scale(1.05);
+  background-color: #091624;
 }
 
 @media (max-width: 1420px) {
@@ -316,5 +309,29 @@ header h2 {
   }
   .benefits, .requirements {
     grid-column: 1/2;
+  }
+}
+@media (max-width: 900px) {
+  .summary {
+    font-size: 1.8rem;
+  }
+  .summary p:nth-child(1) {
+    width: 600%;
+  }
+  .summary p:nth-child(2) {
+    width: 80%;
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .preamble {
+    max-width: 90%;
+    float: none;
+    margin: 2rem auto;
+    padding: 0.4rem;
+    border-radius: 1rem;
+  }
+  .preamble p, .preamble h3 {
+    max-width: 100%;
+    text-align: left;
   }
 }/*# sourceMappingURL=style.css.map */
