@@ -327,11 +327,35 @@ header h2 {
     max-width: 90%;
     float: none;
     margin: 2rem auto;
-    padding: 0.4rem;
+    padding: 1rem;
     border-radius: 1rem;
+    background-image: none;
   }
   .preamble p, .preamble h3 {
     max-width: 100%;
     text-align: left;
+  }
+  .main .explanation, .main .participation {
+    background-image: none;
+    padding: 0;
+  }
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .benefits h3 {
+    font-size: 2rem;
+    padding: 2rem 0;
+    background-size: 96px;
+    animation: none;
+  }
+  .benefits p {
+    font-size: 1rem;
+  }
+  .requirements {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
