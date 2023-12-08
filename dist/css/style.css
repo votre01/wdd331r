@@ -338,6 +338,10 @@ header h2 {
 .requirements h3 {
   grid-column: 1/5;
 }
+.requirements a {
+  color: #de9a38;
+  text-decoration: none;
+}
 .requirements p {
   padding: 1rem;
   margin: 0.4rem;
