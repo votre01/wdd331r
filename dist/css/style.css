@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font: 75% georgia, sans-serif;
+  font: 75% Arial, Helvetica, sans-serif;
   line-height: 1.4;
   color: #959ba3;
   width: 100%;
@@ -82,7 +82,7 @@ header h2 {
   color: #959ba3;
   margin: 0;
   padding: 1rem 6rem;
-  background-color: #091624;
+  background-image: linear-gradient(to bottom right, #732262, #091624, #091624);
   animation: rightToLeft 24s infinite linear;
   width: 300%;
   overflow: hidden;
